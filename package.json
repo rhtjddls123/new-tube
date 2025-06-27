@@ -10,6 +10,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.23.1",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@hookform/resolvers": "^5.1.1",
