@@ -1643,6 +1643,33 @@
     postcss "^8.4.41"
     tailwindcss "4.1.11"
 
+"@tanstack/query-core@5.81.5":
+  version "5.81.5"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.81.5.tgz#14e0cc778bad8bc11d1cf130709910d8a353bb73"
+  integrity sha512-ZJOgCy/z2qpZXWaj/oxvodDx07XcQa9BF92c0oINjHkoqUPsmm3uG08HpTaviviZ/N9eP1f9CM7mKSEkIo7O1Q==
+
+"@tanstack/react-query@^5.81.5":
+  version "5.81.5"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.81.5.tgz#660dba8bb35f24c4cf3617b299a1e3990a3bb49e"
+  integrity sha512-lOf2KqRRiYWpQT86eeeftAGnjuTR35myTP8MXyvHa81VlomoAWNEd8x5vkcAfQefu0qtYCvyqLropFZqgI2EQw==
+  dependencies:
+    "@tanstack/query-core" "5.81.5"
+
+"@trpc/client@^11.4.3":
+  version "11.4.3"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-11.4.3.tgz#0768180ede079f679408f316bbfbcb2bb88f8ba0"
+  integrity sha512-i2suttUCfColktXT8bqex5kHW5jpT15nwUh0hGSDiW1keN621kSUQKcLJ095blqQAUgB+lsmgSqSMmB4L9shQQ==
+
+"@trpc/react-query@^11.4.3":
+  version "11.4.3"
+  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-11.4.3.tgz#870437cfb8b859d92c7a3164956acab373362555"
+  integrity sha512-z+jhAiOBD22NNhHtvF0iFp9hO36YFA7M8AiUu/XtNmMxyLd3Y9/d1SMjMwlTdnGqxEGPo41VEWBrdhDUGtUuHg==
+
+"@trpc/server@^11.4.3":
+  version "11.4.3"
+  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-11.4.3.tgz#669a964c85a0feab45da51e3ad03f63668dba525"
+  integrity sha512-wnWq3wiLlMOlYkaIZz+qbuYA5udPTLS4GVVRyFkr6aT83xpdCHyVtURT+u4hSoIrOXQM9OPCNXSXsAujWZDdaw==
+
 "@tybys/wasm-util@^0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@tybys/wasm-util/-/wasm-util-0.9.0.tgz#3e75eb00604c8d6db470bf18c37b7d984a0e3355"
@@ -2254,7 +2281,7 @@ class-variance-authority@^0.7.1:
   dependencies:
     clsx "^2.1.1"
 
-client-only@0.0.1:
+client-only@0.0.1, client-only@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/client-only/-/client-only-0.0.1.tgz#38bba5d403c41ab150bff64a95c85013cf73bca1"
   integrity sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==
@@ -4562,7 +4589,7 @@ semver@^7.6.0, semver@^7.7.1, semver@^7.7.2:
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.2.tgz#67d99fdcd35cec21e6f8b87a7fd515a33f982b58"
   integrity sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==
 
-server-only@0.0.1:
+server-only@0.0.1, server-only@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/server-only/-/server-only-0.0.1.tgz#0f366bb6afb618c37c9255a314535dc412cd1c9e"
   integrity sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==
