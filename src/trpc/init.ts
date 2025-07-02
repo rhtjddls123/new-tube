@@ -1,5 +1,5 @@
 import { db } from "@/db";
-import { usersTable } from "@/db/schema";
+import { users } from "@/db/schema";
 import { ratelimit } from "@/lib/ratelimit";
 import { auth } from "@clerk/nextjs/server";
 import { initTRPC, TRPCError } from "@trpc/server";
@@ -40,8 +40,8 @@ export const protectedProcedure = t.procedure.use(
 
     const [user] = await db
       .select()
-      .from(usersTable)
-      .where(eq(usersTable.clerkId, ctx.clerkUserId))
+      .from(users)
+      .where(eq(users.clerkId, ctx.clerkUserId))
       .limit(1);
 
     if (!user) {
