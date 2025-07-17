@@ -14,6 +14,10 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { useRouter } from "next/navigation";
+import VideoThumbnail from "@/modules/video/ui/components/video-thumbnail";
+import { snakeCaseToTitle } from "@/lib/utils";
+import { format } from "date-fns";
+import { Globe2Icon, LockIcon } from "lucide-react";
 
 export const VideoSection = () => {
   return (
@@ -60,10 +64,44 @@ const VideosSectionSuspense = () => {
                   className="cursor-pointer"
                   key={video.id}
                 >
-                  <TableCell>{video.title}</TableCell>
-                  <TableCell>visiblity</TableCell>
-                  <TableCell>status</TableCell>
-                  <TableCell>date</TableCell>
+                  <TableCell>
+                    <div className="flex items-center gap-4">
+                      <div className="relative aspect-video w-36 shrink-0">
+                        <VideoThumbnail
+                          imageUrl={video.thumbnailUrl}
+                          previewUrl={video.previewUrl}
+                          title={video.title}
+                          duration={video.duration}
+                        />
+                      </div>
+                      <div className="flex flex-col gap-y-1 overflow-hidden">
+                        <span className="line-clamp-1 text-sm">
+                          {video.title}
+                        </span>
+                        <span className="text-muted-foreground line-clamp-1 text-xs">
+                          {video.description || "No description"}
+                        </span>
+                      </div>
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex items-center">
+                      {video.visibility === "private" ? (
+                        <LockIcon className="mr-2 size-4" />
+                      ) : (
+                        <Globe2Icon className="mr-2 size-4" />
+                      )}
+                      {snakeCaseToTitle(video.visibility)}
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex items-center">
+                      {snakeCaseToTitle(video.muxStatus || "error")}
+                    </div>
+                  </TableCell>
+                  <TableCell className="truncate text-sm">
+                    {format(new Date(video.creagtedAt), "yyyy.MM.dd")}
+                  </TableCell>
                   <TableCell>views</TableCell>
                   <TableCell>comments</TableCell>
                   <TableCell>likes</TableCell>
@@ -82,4 +120,4 @@ const VideosSectionSuspense = () => {
   );
 };
 
-export default VideosSectionSuspense;
+export default VideoSection;
